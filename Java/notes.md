@@ -1,2 +1,2 @@
-![alt text](Images/Mutable.png)
-![alt text](Images/Mutable2.png)
+![alt text](images/Mutable.png)
+![alt text](images/Mutable2.png)
