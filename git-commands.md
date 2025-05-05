@@ -48,7 +48,7 @@ git push -u origin <branch-name> # Set the upstream tracking relationship.
 git branch -vv # Check relationship between remote & local
 ```
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 ## 🔽 Pulling from Remote
 
