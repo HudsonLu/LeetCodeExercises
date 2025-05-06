@@ -111,3 +111,71 @@ git reset --hard abc123      # go back and erase later commits
 git revert abc123            # undo commit safely
 
 ```
+
+## 📁 Scenario: Hide a folder from GitHub but keep it locally
+
+### 🔹 Step 1: Remove folder from Git tracking (but not from disk)
+
+```bash
+git rm -r --cached folder_name/
+```
+
+- Removes the folder from the Git index (GitHub), but not your computer.
+
+---
+
+### 🔹 Step 2: Add folder to `.gitignore`
+
+Edit or create the `.gitignore` file and add:
+
+```
+folder_name/
+```
+
+- Prevents Git from tracking this folder in the future.
+
+---
+
+### 🔹 Step 3: Commit and push changes
+
+```bash
+git add .gitignore
+git commit -m "Remove and ignore folder_name"
+git push
+```
+
+- Applies the removal and ignore rules to GitHub.
+
+---
+
+## 🔄 Example: Hiding a `secret_config/` folder
+
+```bash
+git rm -r --cached secret_config/
+echo "secret_config/" >> .gitignore
+git add .gitignore
+git commit -m "Removed secret_config/ and added to .gitignore"
+git push
+```
+
+---
+
+## 📝 Useful Notes
+
+| Command               | Purpose                                        |
+| --------------------- | ---------------------------------------------- |
+| `git rm --cached`     | Remove file/folder from index but keep locally |
+| `.gitignore`          | List of files/folders Git should ignore        |
+| `git add .gitignore`  | Track your ignore rules                        |
+| `git commit -m "..."` | Save a commit message                          |
+| `git push`            | Upload your changes to GitHub                  |
+
+---
+
+## ✅ Best Practices
+
+- Always test `.gitignore` changes with `git status`.
+- Never ignore files **after** pushing secrets – use GitHub's secret scanning.
+- Use `git reset` or `git restore` carefully if you make a mistake.
+
+---
