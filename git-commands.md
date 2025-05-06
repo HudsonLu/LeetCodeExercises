@@ -50,8 +50,6 @@ git branch -vv # Check relationship between remote & local
 commit XXXXXXXXXXXX (HEAD -> local-branch, origin/remote-branch, origin/HEAD)
 ```
 
-![alt text](images/image.png)
-
 ## 🔽 Pulling from Remote
 
 ```bash
