@@ -46,6 +46,8 @@ git commit -m "Your commit message"
 git push origin <branch-name>
 git push -u origin <branch-name> # Set the upstream tracking relationship.
 git branch -vv # Check relationship between remote & local
+
+commit XXXXXXXXXXXX (HEAD -> local-branch, origin/remote-branch, origin/HEAD)
 ```
 
 ![alt text](images/image.png)

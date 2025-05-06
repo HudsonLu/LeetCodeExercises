@@ -5,7 +5,10 @@ public class Geometries {
     }
 
 
-    public static void Triangle(){};
+    public static void Triangle(){
+        
+
+    };
 
 
     public static void Rectangle(){};
